@@ -5,7 +5,7 @@ from enums.gpio_device_state import GpioDeviceState
 class GpioDevice():
     def __init__(self, device_name, pin):
         self.device_name = device_name
-        self.pin = pin #TODO validate if pin in right GPIO pins pool
+        self.pin = pin  # TODO validate if pin in right GPIO pins pool
         self.__device = gpio.LED(pin)
         self.device_state = GpioDeviceState.OFF
 
