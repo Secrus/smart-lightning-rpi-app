@@ -1,5 +1,5 @@
 from flask import Flask
-from gpio_device import GpioDevice
+from gpio_device.gpio_device import GpioDevice
 app = Flask(__name__)
 
 """
@@ -48,6 +48,12 @@ def off(device_name):
 @app.route('/available')
 def available_devices():
     # return list of available lightning devices
+    pass
+
+
+@app.route('/about')
+def about():
+    # return device info, gpio devices list and status, all in json file
     pass
 
 
